@@ -19,7 +19,12 @@ public class Two_Sum {
 		return result;
     }
 	
-//	O(n)
+	/**
+	 * O(n). Using the Hashmap
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 	public static int[] twoSumOptimized(int[] nums, int target) {
 		HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
 		
