@@ -1,5 +1,7 @@
 package invertBinaryTree;
 
+import trees.TreeNode;
+
 /**
  * Invert a binary tree.
 		

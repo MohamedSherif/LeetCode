@@ -1,5 +1,7 @@
 package maximumDepthOfBinaryTree;
 
+import trees.TreeNode;
+
 /**
  * Given a binary tree, find its maximum depth.
  * 
