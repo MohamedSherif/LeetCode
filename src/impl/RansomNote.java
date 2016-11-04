@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class RansomNote {
 
 	/**
-	 * O(n) solution, using Hashmap as its addition and removal of time complexity of O(1)
+	 * O(n) solution, using Hashmap as its addition and removal of time complexity of O(1).
+	 * 
+	 * Run Time: 	69 ms.
+	 * 
 	 * @param ransomNote
 	 * @param magazine
 	 * @return
@@ -59,6 +62,8 @@ public class RansomNote {
 	
 	/**
 	 * O(n^2) using string operations.
+	 * 
+	 * Run Time:	301 ms
 	 * 
 	 * @param ransomNote
 	 * @param magazine
