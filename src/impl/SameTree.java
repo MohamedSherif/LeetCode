@@ -13,7 +13,6 @@ import trees.TreeNode;
  */
 public class SameTree {
 	public boolean isSameTree(TreeNode p, TreeNode q) {
-		boolean isSame = true;
 		if(p == null && q == null){
 			return true;
 		}
