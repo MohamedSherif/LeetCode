@@ -39,7 +39,7 @@ public class UniquePaths {
 	public static int backtrack(int r, int c, int m, int n) {
 		if (r == (m - 1) && c == (n - 1))
 			return 1;
-		if (r > m || c > n)
+		if (r > (m-1) || c > (n-1))
 			return 0;
 
 		return backtrack(r + 1, c, m, n) + backtrack(r, c + 1, m, n);
@@ -69,11 +69,13 @@ public class UniquePaths {
 	public static int backtrack(int r, int c, int m, int n, int mat[][]) {
 		if (r == m && c == n)
 			return 1;
+		
 		if (r > m || c > n)
 			return 0;
 
 		if (mat[r + 1][c] == -1)
 			mat[r + 1][c] = backtrack(r + 1, c, m, n, mat);
+		
 		if (mat[r][c + 1] == -1)
 			mat[r][c + 1] = backtrack(r, c + 1, m, n, mat);
 
@@ -119,10 +121,49 @@ public class UniquePaths {
 		return mat[1][1];
 	}
 	
+	
+	/**
+	 * Another solution with 0 ms time.
+	 * 
+	 * @param m
+	 * @param n
+	 * @return
+	 */
+	public static long getPaths(int m, int n){
+		long[][] mat = new long[m+1][n+1];
+		
+		mat[0][1] = 1;
+		
+		for (int i = 1; i <= m; i++) {
+			for (int j = 1; j <= n; j++) {
+				mat[i][j] = mat[i-1][j] + mat[i][j-1];
+			}
+		}
+		
+		return mat[m][n];
+	}
+	
+	
+	
+	
 	public static void main(String[] args) {
-
+		long t1 = System.currentTimeMillis();
 		System.out.println(td(23, 12));
+		long t2 = System.currentTimeMillis();
+		
 		System.out.println(dp(23, 12));
+		long t3 = System.currentTimeMillis();
+		
+		System.out.println(getPaths(23, 12));
+		long t4 = System.currentTimeMillis();
+		
+//		System.out.println(backtrack(0, 0, 23, 12));
+//		long t5 = System.currentTimeMillis();
+		
+		System.out.println(t2-t1);
+		System.out.println(t3-t2);
+		System.out.println(t4-t3);
+//		System.out.println(t5-t4);
 	}
 
 }
