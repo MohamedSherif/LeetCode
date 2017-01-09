@@ -22,8 +22,10 @@ public class ReverseInteger {
 	}
 	
 	public static void main(String[] args) {
-		int res = reverse(-6531);
-		System.out.println(res);
+//		int res = reverse(-6531);
+//		System.out.println(res);
+		
+		System.out.println(reverse(-1146467285));
 	}
 	
 }
