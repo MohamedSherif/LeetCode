@@ -142,7 +142,7 @@ public class UniquePaths {
 		
 		return mat[m][n];
 	}
-	
+		
 	
 	
 	
@@ -157,13 +157,13 @@ public class UniquePaths {
 		System.out.println(getPaths(23, 12));
 		long t4 = System.currentTimeMillis();
 		
-//		System.out.println(backtrack(0, 0, 23, 12));
-//		long t5 = System.currentTimeMillis();
+		System.out.println(backtrack(0, 0, 23, 12));
+		long t5 = System.currentTimeMillis();
 		
 		System.out.println(t2-t1);
 		System.out.println(t3-t2);
 		System.out.println(t4-t3);
-//		System.out.println(t5-t4);
+		System.out.println(t5-t4);
 	}
 
 }
