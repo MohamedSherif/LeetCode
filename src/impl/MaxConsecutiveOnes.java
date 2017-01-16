@@ -40,8 +40,19 @@ public class MaxConsecutiveOnes {
 		return maxConsecutiveOnes;
 	}
 
+	public static int findMaxConsecutiveOnes2(int[] nums) {
+		int max = 0;
+		int currentMax = 0;
+
+		for (int n : nums) {
+			currentMax = (n == 0)? 0 : (currentMax + 1);
+			max = Math.max(max,  currentMax);
+		}
+		return max;
+	}
+	
 	public static void main(String[] args) {
-		int[] nums = new int[] { 1, 0, 1, 0, 1, 1 };
-		System.out.println(findMaxConsecutiveOnes(nums));
+		int[] nums = new int[] { 0, 0, 0 };
+		System.out.println(findMaxConsecutiveOnes2(nums));
 	}
 }
