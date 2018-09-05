@@ -34,6 +34,7 @@ public class NumberComplement {
 		
 		BigInteger bin = new BigInteger(""+num);
 		
+		System.out.println();
         return num;
     }
 	
