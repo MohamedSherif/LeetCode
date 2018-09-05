@@ -70,6 +70,7 @@ public class LongestPalindrome {
 
 	public static void main(String[] args) {
 //		System.out.println(longestPalindrome("abcccccdd"));
+		
 		System.out.println(longestPalindrome("xacbbbcax"));
 	}
 }
