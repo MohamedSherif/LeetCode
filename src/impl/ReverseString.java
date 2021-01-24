@@ -16,7 +16,24 @@ public class ReverseString {
 		return sb.toString();
     }  
 	
+	public static void reverseString(char[] s) {
+        int startIndex = 0;
+        int endIndex = s.length - 1;
+        
+        while(startIndex < endIndex){
+            char temp = s[startIndex];
+            s[startIndex] = s[endIndex];
+            s[endIndex] = temp;
+            
+            startIndex++;
+            endIndex--;
+        }
+    }
+	
 	public static void main(String[] args) {
 		System.out.println(reverseString("hello"));
+		char[] s = {'h', 'e', 'l', 'l', 'o'};
+		reverseString(s);
+		System.out.println(s);
 	}
 }

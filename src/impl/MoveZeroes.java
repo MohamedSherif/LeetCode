@@ -16,23 +16,36 @@ package impl;
  */
 public class MoveZeroes {
 	public static int[] moveZeroes(int[] nums) {
-		int current = 0;
+		int maxNonZeroIndex = 0;
 		for (int i = 0; i < nums.length; i++) {
 			if(nums[i] != 0){
-				nums[current] = nums[i];
-				current ++;
+				nums[maxNonZeroIndex++] = nums[i];
 			}
 		}
 		
-		while(current < nums.length){
-			nums[current] = 0;
-			current ++;
+		for(int i = maxNonZeroIndex; i < nums.length; i++) {
+			nums[i] = 0;
 		}
 		
 		return nums;
 	}
 	
+	public static int[] moveZeroes2(int[] nums) {
+		int maxNonZeroIndex = 0;
+		
+		for (int currentIndex = 0; currentIndex < nums.length; currentIndex++) {
+			if(nums[currentIndex] != 0){
+				swap(nums, currentIndex, maxNonZeroIndex++);
+			}
+		}
+		return nums;
+	}
 	
+	private static void swap(int[] arr, int i, int j) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
 	
 	
 	public static void main(String[] args) {

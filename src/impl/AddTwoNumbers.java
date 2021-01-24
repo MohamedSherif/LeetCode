@@ -13,7 +13,7 @@ public class AddTwoNumbers {
 //		ListNode currentL2Digit = l2;
 //		
 //		ListNode currentResultDigit = result;
-//		while (currentL1Digit != null){
+//		 while (currentL1Digit != null){
 //			if(currentL2Digit != null){
 //				currentDigitSum = (currentL1Digit.getVal() + currentL2Digit.getVal() + remainingSum);
 //				remainingSum = 0;
