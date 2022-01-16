@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-import jdk.nashorn.internal.runtime.regexp.joni.encoding.CharacterType;
-
 public class Solutions {
 	/**
 	 * Definition for singly-linked list.
